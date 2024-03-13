@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MovieTicketPricing {
+public class MatineeTicketPricing {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
