@@ -1,16 +1,11 @@
-/*This program calculates the your age in seconds
-Name: Ramie Theofil D. Pondar
-Date:  03/16/24 */
 import java.util.Scanner;
 
 public class AgeInSeconds {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        //declarations
         int years, months, days, sec, totalDays;
         double percent;
 
-        //input
         System.out.print("Enter your age in years: ");
         years = scan.nextInt();
         System.out.println("Enter your age in months: ");
@@ -18,7 +13,6 @@ public class AgeInSeconds {
         System.out.println("Enter your age in days: ");
         days = scan.nextInt();
 
-        //process
         if (months == 1) {
             totalDays = 31;
         } else if (months == 2) {
@@ -48,7 +42,6 @@ public class AgeInSeconds {
         sec = (((((years * 365) + totalDays + days) * 24) * 60) * 60);
         percent = (sec / 2500000000.0) * 100;
 
-        //output
         System.out.println("Your age in seconds: " + sec);
         System.out.println("A human lifespan is about 2.5 billion seconds (2.5 billion heart-beats)");
         System.out.printf("Percentage of expected lifespan lived: %2.2f%%", percent);

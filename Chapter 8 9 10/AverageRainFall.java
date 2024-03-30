@@ -1,21 +1,43 @@
-/*This program calculates the average of the following months
-Name: Ramie Theofil D. Pondar
-Date: 02/20/24*/
-public class AverageRainFall
-{
-    public static void main (String[] args)
-    { 
-        //declarations and input
-        short april = 12;
-        short may = 14;
-        short june = 8;
-        double average;
-        //process
-        average = (april + may + june) / 3.0;
-        //output
-        System.out.println("Rainfall for April:\t" + april);
-        System.out.println("Rainfall for May:\t" + may);
-        System.out.println("Rainfall for June:\t" + june);
-        System.out.println("Average rainfall:\t" + average);
+
+import java.util.Scanner;
+
+public class AverageRainFall {
+    public static void main(String[] args) {
+        Scanner scanner;
+        String response;
+
+        do 
+        {
+            scanner = new Scanner(System.in); 
+
+            double number;
+            do 
+            {
+                System.out.print("Enter a number--> ");
+                while (!scanner.hasNextDouble()) {
+                    System.out.println(">>>Please enter a valid number<<<");
+                    System.out.print("Enter a number--> ");
+                    scanner.next(); 
+                }
+                number = scanner.nextDouble();
+                if (number <= 0) {
+                    System.out.println(">>>Number must be positive<<<");
+                }
+            } while (number <= 0);
+
+            double squareRoot = Math.sqrt(number);
+            System.out.println("Square root of " + number + " is " + squareRoot);
+
+            do {
+                System.out.print("Do you wish to continue (yes or no)? ");
+                response = scanner.next().toLowerCase();
+                if (!response.equals("yes") && !response.equals("no")) {
+                    System.out.println(">>>Please respond with (yes or no)<<<");
+                }
+            } while (!response.equals("yes") && !response.equals("no"));
+
+        } while (response.equals("yes"));
+
+        System.out.println("Bye");
     }
 }

@@ -1,10 +1,14 @@
+/*This program is a fantasy game
+Name: Ramie Theofil D. Pondar
+Date: 03/16/24 */
 import java.util.Scanner;
 
 public class FantasyGame{
    public static void main(String[] args){
+      //declaration
       Scanner scan = new Scanner (System.in);
       String charname;
-      
+      //input
       System.out.println("Welcome to Yertle's Quest");
       System.out.println("You have 15 stat points");
       System.out.println("Enter the name of your character: ");
@@ -15,7 +19,7 @@ public class FantasyGame{
       int health = scan.nextInt();
       System.out.println("Enter luck (1 - 10): ");
       int luck = scan.nextInt();
-      
+      //process and output
       int stats = stren + health + luck;
       if (stats > 15){
          System.out.println("You have give your character too many points!  Default values have been assigned:");

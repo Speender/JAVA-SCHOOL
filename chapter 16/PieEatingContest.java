@@ -1,3 +1,6 @@
+/*This program determines the contestant if they can join the contest
+Name: Ramie Theofil D. Pondar
+Date: 03/16/24 */
 import java.util.Scanner;
 
 public class PieEatingContest{

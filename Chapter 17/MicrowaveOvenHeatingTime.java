@@ -1,37 +1,30 @@
+/*This program calculates the  total time for the microwave
+Name: Ramie Theofil D. Pondar
+Date: 03/16/24*/
 import java.util.Scanner;
 
-public class MicrowaveOvenHeatingTime {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("How many items to heat: ");
-        int items = scan.nextInt();
-        System.out.print("Time for one item: ");
-        int time = scan.nextInt();
-
-        int seconds;
-        if (time < 100) {
-            seconds = time;
-        } else {
-            int minutes = time / 100;
-            int remainingSeconds = time % 100;
-            seconds = minutes * 60 + remainingSeconds;
-        }
-
-        if (items == 1) {
-        } else if (items == 2) {
-            seconds += seconds / 2;
-        } else if (items == 3) {
-            seconds *= 2;
-        } else {
-            System.out.println("Heating more than three items at once is not recommended.");
-            return;
-        }
-
-        int minutes = seconds / 60;
-        int remainingSeconds = seconds % 60;
-
-
-        System.out.println("Heat for " + minutes + " minutes " + remainingSeconds + " seconds");
-    }
+public class MicrowaveOvenHeatingTime{
+   public static void main (String[] args){
+      Scanner scan = new Scanner (System.in);
+      //declarations
+      int val1 = 0, val2 = 0, val3 = 0, val4 = 0;
+      //input
+      System.out.printf("How many items to heat?: ");
+      int items = scan.nextInt();
+      System.out.printf("Time for one item: ");
+      int time = scan.nextInt();
+      //process
+      if (time <= 1000){
+         val1 = time / 100 % 10;
+         val2 = time / 10 % 10;
+         val3 = time % 10;
+      } else if (time > 1000){
+            val1 = time / 100 % 10;
+            val2 = time / 10 % 10;
+            val3 = time % 10;
+      }
+      //output
+      System.out.println("Heat for "+ val1 + "Minutes" + " "+ val2 + val3 +"seconds"); 
+     
+   }
 }
